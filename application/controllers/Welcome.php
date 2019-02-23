@@ -21,13 +21,6 @@ class Welcome extends CI_Controller
      */
     public function index()
     {
-        // GitHub Webhook Secret.
-        // Keep it the same with the 'Secret' field on your Webhooks / Manage webhook page of your respostory.
-        $secret = "penglin";
-        // e.g. "/var/www/respostory"
-        $path = "/www/wwwroot/ci";
-        // Headers deliveried from GitHub
-        echo shell_exec("cd {$path} && /usr/bin/git reset --hard origin/master && /usr/bin/git clean -f && /usr/bin/git pull 2>&1");
         $this->load->view('welcome_message');
     }
 
