@@ -34,7 +34,7 @@ class Welcome extends CI_Controller
     public function list()
     {
 
-        $this->load->view('welcome_message');
+        $this->load->view('list');
     }
 
     
