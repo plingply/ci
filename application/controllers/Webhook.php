@@ -1,7 +1,9 @@
 <?php
+class Blog extends CI_Controller {
 
-
-    $target = '/www/wwwroot/ci'; // 生产环境web目录
+    public function index()
+    {
+        $target = '/www/wwwroot/ci'; // 生产环境web目录
     //密钥
     $secret = "123456";
     $wwwUser = 'www';
@@ -47,3 +49,5 @@
            fwrite($fs, $res_log);
            $fs and fclose($fs);
       }
+    }
+}
