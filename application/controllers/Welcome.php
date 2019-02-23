@@ -25,7 +25,8 @@ class Welcome extends CI_Controller
     }
 
     public function webhook()
-    {
+    {	
+		$this->load->view('welcome_message');
 
         // GitHub Webhook Secret.
         // Keep it the same with the 'Secret' field on your Webhooks / Manage webhook page of your respostory.
