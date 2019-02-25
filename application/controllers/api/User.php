@@ -11,9 +11,12 @@ class User extends CI_Controller
     public function list(){
         $query = $this->db->get('user');
 
-        foreach ($query->result() as $row)
-        {
-            echo $row;
-        }
+		$data['data']   = $query;
+
+		$this->output
+			->set_content_type('application/json')
+			->set_output(json_encode($data, JSON_UNESCAPED_UNICODE))
+			->_display();
+		exit();
     }
 }
