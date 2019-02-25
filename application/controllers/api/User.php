@@ -9,10 +9,11 @@ class User extends CI_Controller
     }
     
     public function list(){
-        $query = $this->db->query('SELECT * FROM user');
-        $this->output
-			->set_output($query)
-            ->_display();
-            exit();
+        $query = $this->db->get('user');
+
+        foreach ($query->result() as $row)
+        {
+            echo $row->nickname;
+        }
     }
 }
