@@ -9,7 +9,7 @@ class User extends CI_Controller
     }
     
     public function list(){
-        $query = $this->db->get('user');
+        $query = $this->db->query('SELECT nickname,phone,sex,birthday,type_id,user_type.label,class_id,class.name FROM user LEFT JOIN user_type ON user.type_id = user_type.id LEFT JOIN class ON user.class_id = class.id');
 
 
 		$data['data']   = $query->result_array();
