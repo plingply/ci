@@ -68,7 +68,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <body>
 
 <div id="container">
-	<h1>Welcome to CodeIgniter!__home</h1>
+	<h1>Welcome to CodeIgniter!__home_x</h1>
 
 	<div id="body">
 		<p>SELECT user.id,user.nickname,user.phone,user.sex,user.birthday,user_type.id AS type_id,user_type.label AS type_name FROM user,user_type WHERE user.id=1 AND user.id = user_type.user_id</p>
