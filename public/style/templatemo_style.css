@@ -66,6 +66,7 @@ h6 { font-size: 12px; margin: 0 0 5px; padding: 0; }
 	position: relative;
 	width: 966px;
 	margin: 0 auto;
+	margin: 0 auto;
 }
 .bg_top { position: absolute; top: 0; left: -120px; width: 1200px; height: 570px; background: url(/images/templatemo_bg_top.png) no-repeat; z-index: -1000 }
 
