@@ -1,6 +1,6 @@
 RewriteEngineOn
 
-RewriteBase /  
+RewriteBase /
 
 RewriteCond %{REQUEST_FILENAME} !-f
 
