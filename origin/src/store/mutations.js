@@ -1,5 +1,5 @@
 export default {
-	setquery(state, data) {
-		state.query = data
+	setMenu(state, data) {
+		state.menu = data
 	}
 }

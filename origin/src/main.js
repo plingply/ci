@@ -26,6 +26,14 @@ let router = new vueRouter({
     }
 })
 
+router.beforeEach(function (to, from, next) {
+    if(store.state.menu.length > 0){
+        next()
+    }else{
+        store.dispatch('getMenu',next)
+    }
+})
+
 
 new vue({
     store,

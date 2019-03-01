@@ -1,12 +1,19 @@
 <template>
   <div class="menu">
-    <div><a class="active" href="">主页</a></div>
-    <div><a href="">主页</a></div>
-    <div><a href="">主页</a></div>
-    <div><a href="">主页</a></div>
-    <div><a href="">主页</a></div>
+    <div v-for="(item,index) in menu" :key="index"><a class="active" :href="item.url">{{ item.name }}</a></div>
   </div>
 </template>
+
+<script>
+export default {
+  computed: {
+    menu(){
+      return this.$store.state.menu
+    }
+  },
+}
+</script>
+
 
 <style lang="less" scoped>
 @import "../../less/style";

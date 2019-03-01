@@ -6,7 +6,7 @@ import home from '../views/home.vue'
 
 var routes = [{
     path: '/',
-    redirect: '/index/main'
+    redirect: '/main/home'
 }, {
     path: '/main',
     name: 'main',

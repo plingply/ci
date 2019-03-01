@@ -9,7 +9,7 @@ module.exports = {
 		// 静态资源路径
 		publicPath: '/',
 		//api 代理地址
-		apiURL: '',
+		apiURL: 'http://127.0.0.1:5000',
 		// 打开地址
 		host: '127.0.0.1'
 	},
@@ -20,7 +20,7 @@ module.exports = {
 		// 静态资源路径
 		publicPath: '',
 		//api 代理地址
-		apiURL: ''
+		apiURL: 'http://127.0.0.1:5000'
 	},
 	// 打包地址
 	distUrl:'../../public/apps/',
