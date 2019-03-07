@@ -1,5 +1,5 @@
 <?php
-class View_model extends MY_Model {
+class View_model extends M_Model {
 
     public function __construct()
     {

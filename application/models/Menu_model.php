@@ -1,5 +1,5 @@
 <?php
-class Menu_model extends MY_Model {
+class Menu_model extends M_Model {
 
     public function __construct()
     {
