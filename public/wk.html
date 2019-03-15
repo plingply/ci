@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Worker</title>
+</head>
+
+<body>
+    <div>worker</div>
+
+    <button id="btn" type="button">发送消息</button>
+
+    <script>
+        var worker = new Worker('js/work.js');
+
+        var btn = document.getElementById('btn')
+
+        btn.addEventListener('click',function(){
+            worker.postMessage({ method: 'echo', args: ['Work'] });
+        })
+
+        
+
+        worker.onmessage = function (event) {
+            console.log('主进程打印：',event.data)
+            doSomething(event.data);
+            let count = 100
+            for(let i=0;i<count;i++){
+                console.log('parent:',i)
+            }
+        }
+
+        function doSomething(data) {
+            // 执行任务
+            var div = document.createElement('div')
+            div.innerHTML = data
+            document.body.appendChild(div)
+        }
+
+
+    </script>
+</body>
+
+</html>
