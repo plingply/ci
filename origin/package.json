@@ -53,7 +53,7 @@
     "webpack-parallel-uglify-plugin": "^1.1.0"
   },
   "dependencies": {
-    "axios": "^0.18.0",
+    "axios": "^0.21.1",
     "es6-promise": "^4.2.4",
     "vue": "^2.5.16",
     "vue-router": "^3.0.1",
